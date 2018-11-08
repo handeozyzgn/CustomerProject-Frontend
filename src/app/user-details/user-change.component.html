@@ -1,0 +1,28 @@
+
+<div class="col-md-6">
+<h2> User Change</h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>Country</th>
+    <th>Age</th>
+    <th>Active</th>
+  </tr>
+</thead>
+  <tbody>
+ <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td> <input [(ngModel)]="user.firstname" placeholder="First Name" name="firstname" class="form-control" id="firstname"></td>
+    <td> <input [(ngModel)]="user.lastname" placeholder="Last name" name="lastname" class="form-control" id="lastname"></td>
+    <td><input type="country" [(ngModel)]="user.country" placeholder="Country" name="country" class="form-control" id="country"></td>
+    <td><input type="age" [(ngModel)]="user.age" placeholder="Age" name="country" class="form-control" id="age"></td>
+    <td><button class="btn btn-danger" (click)="changeUser(user)"> Change User</button></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
